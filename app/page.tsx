@@ -3,11 +3,11 @@ import { format, parseISO } from "date-fns";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
 
-export type MdxProps = {
+type MdxProps = {
   code: string;
 };
 
-export const MdxRenderer = ({ code }: MdxProps) => {
+const MdxRenderer = ({ code }: MdxProps) => {
   const Component = useMDXComponent(code);
   return <Component />;
 };
